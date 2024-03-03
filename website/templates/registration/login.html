@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candleaf/Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css'%}">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login</h2>
+      <form>
+        <div class="input-group">
+          <label for="username">Username:</label>
+          <input type="text" class="username" name="username" required />
+        </div>
+        <div class="input-group">
+          <label for="password">Password:</label>
+          <input type="password" class="password" name="password" required />
+        </div>
+        <div class="input-group">
+          <button type="submit" class="submit">Sign In</button>
+        </div>
+        <div class="sign-up">
+          <span>Or</span>
+          <a href="{% url 'website:signup'%}">Sign-up</a>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script type="module" src="{% static 'js/login.js'%}"></script>
+</html>

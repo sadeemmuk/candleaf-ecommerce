@@ -1,0 +1,71 @@
+:root {
+  --main-color: #56b280;
+  --second-color: #f7f8fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+header img {
+  margin: 5px;
+}
+header img:first-of-type {
+  margin-right: 10px;
+}
+
+main .one {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .one i {
+  font-size: 140px;
+  color: #56b280a6;
+  animation: circle 1ms linear delay infinite;
+}
+
+main .one h1 {
+  font-weight: normal;
+}
+
+main .one span {
+  color: var(--main-color);
+}
+
+main .one p {
+  margin-top: 20px;
+  font-family: sans-serif;
+  line-height: 1.5;
+  width: 500px;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.one a {
+  background-color: var(--main-color);
+  border: none;
+  padding: 5px 20px;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}

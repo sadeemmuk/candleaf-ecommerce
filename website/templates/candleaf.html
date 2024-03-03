@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candleaf</title>
+<link rel="stylesheet" href="../../static/css/candleaf.css">
+<link rel="stylesheet" href="../../static/css/all.min.css">
+<link rel="stylesheet" href="../../static/css/normalize.css">
+<style>
+
+</style>
+</head>
+<body>
+    <!--Start Header-->
+   <header>
+    <div class="list-icon">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="main-icon">
+        <img  class="one" src="../../static/images/products/icon.6e5d1c5d98b7187206cc019288e71fcf.svg">
+        <img src="../../static/images/products/wordmark.0c42ab7ebd6cadc552e4ffcc9f7e90c4.svg">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Discover</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+    </nav>
+    <div class="second-icon">
+       <a href="#"><i class="fa-regular fa-user"></i></a>
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+   </header>
+   <!--End Header-->
+   <!--Start main element-->
+   <main>
+    <section class="product">
+        <div class="product-box">
+          <div class="img-box">
+            <img src="../../static/images/products/Sweet Straweberry.png" />
+            <p>
+              All hand-made with natural soy wax, Candleaf is 
+            </p>
+            <p>made for your pleasure
+              moments.</p>
+            <p><i></i>🚚 free shipping</p>
+          </div>
+          <div class="text-box">
+            <h2>Spiced Mint Candleaf®</h2>
+            <p>$9.99</p>
+            <form>
+              <input type="hidden" value="{{price.name}}" name="name" />
+              <input type="hidden" value="{{price.price}}" name="price" />
+              <div class="Quantity">
+                <label>Quantity</label>
+                <input type="number" name="number" value="1" min="1"/>
+                <button><i class="fa-solid fa-cart-shopping"></i> + Add to cart</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+   </main>
+   <footer>
+    <div class="information">
+        <div class="icon-footer">
+        <img src="../../static/images/products/footer-logo.6b9a2c80d878270d6a3e26ca369d8f15.svg">
+        <p>Your natural candle made for your home and for your wellness</p>
+        </div>
+        <div class="detalis">
+            <div class="discovery">
+                <h4>Discovery</h4>
+                <p>New season</p>
+                <p>Most searched</p>
+                <p>Most selled</p>
+            </div>
+            <div class="about">
+                <h4>About</h4>
+                <p>Help</p>
+                <p>Shipping</p>
+                <p>Affiliate</p>
+            </div>
+            <div class="info">
+                <h4>Info</h4>
+                <p>Contact us</p>
+                <p>Privacy Policies</p>
+                <p>Terms & Conditions</p>
+            </div>
+        </div>
+    </div>
+   </footer>
+</body>
+</html>

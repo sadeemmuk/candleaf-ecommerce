@@ -1,0 +1,104 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<section class="home-one">
+    <div class="card-bag">
+        <i>🌱</i>
+        <h3>The nature candle</h3>
+        <p>All handmade with natural soy wax, Candleaf is a companion for all your pleasure moments </p>
+        <a href="#section-products" id="discovery-btn">Discovery our collection</a>
+    </div>
+</section>
+<section class="section-two">
+    <div class="context">
+        <h2>Products</h2>
+        <p>Order it for you or your beloved ones</p>
+    </div>
+    <div class="section-products" id="section-products">
+        {% for product in Products %}
+        <div>
+            <a href="{% url 'website:product' product.id %}"><img src="static/images/products/{{product.name}}.png"></a>
+            <h4>{{product.name}}</h4>
+            <p>{{product.price}}$</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<!--Start section benefits-->
+<section class="section-benefits">
+    <div class="benefit-context">
+        <h2>Clean and fragrant soy wax</h2>
+        <p>Made for your home and for your wellness</p>
+        <ul>
+            <li><i class="fa-regular fa-circle-check"></i>Eco-susrainable:All recycable materials, 0%CO2 emissions</li>
+            <li><i class="fa-regular fa-circle-check"></i></i>Hyphoallergnic:100% natural, human freindly ingredients</li>
+            <li><i class="fa-regular fa-circle-check"></i></i>Handmade:All candles are craftly made with love.</li>
+            <li><i class="fa-regular fa-circle-check"></i></i>Long burning:No more waste. Created for last long.</li>
+        </ul>
+        <button>Learn more</button>
+    </div>
+    <div class="candle-groups">
+        <img src="{% static 'images/products/candle_groups.ac0bd1862b0da31d98fe.png'%}">
+    </div>
+</section>
+<!--End section benefits-->
+<!--Start testimonials section-->
+<section class="testimonials">
+<div class="context">
+<h2>Testimonials</h2>
+<p>Some quotes from our happy customers</p>
+</div>
+<div class="quotes">
+<div class="user-box">
+    <img  class="user-img" src="{% static 'images/products/user1.a53d5804a1a1d7cd8234.png'%}">
+    <div>
+        <span><img src="{% static 'images/products/star.38ca517c73c491c3d955a799b27aaac6.svg'%}"></span>
+        <span><img src="{% static 'images/products/star.38ca517c73c491c3d955a799b27aaac6.svg' %}"></span>
+        <span><img src="{% static 'images/products/star.38ca517c73c491c3d955a799b27aaac6.svg'%}"></span>
+        <span><img src="{% static 'images/products/star.38ca517c73c491c3d955a799b27aaac6.svg'%}"></span>
+    </div>
+    <p><q>I love it! No more air fresheners</q></p>
+    <div class="user-name">Luisa</div>
+</div>
+<div class="user-box">
+    <img class="user-img" src="{% static 'images/products/user2.bb1d41d5b7d50f946946.png'%}">
+    <div>
+        <span><img src="{% static 'images/products/star.38ca517c73c491c3d955a799b27aaac6.svg'%}"></span>
+        <span><img src="{% static 'images/products/star.38ca517c73c491c3d955a799b27aaac6.svg' %}"></span>
+        <span><img src="{% static 'images/products/star.38ca517c73c491c3d955a799b27aaac6.svg'%}"></span>
+        <span><img src="{% static 'images/products/star.38ca517c73c491c3d955a799b27aaac6.svg'%}"></span>
+    </div>
+    <p><q>Raccomended for everyone</q></p>
+    <div class="user-name">Edoardo</div>
+</div>
+<div class="user-box">
+    <img class="user-img" src="{% static 'images/products/user3.bac4862b982968fde686.png'%}">
+    <div>
+        <span><img src="{% static 'images/products/star.38ca517c73c491c3d955a799b27aaac6.svg'%}"></span>
+        <span><img src="{% static 'images/products/star.38ca517c73c491c3d955a799b27aaac6.svg' %}"></span>
+        <span><img src="{% static 'images/products/star.38ca517c73c491c3d955a799b27aaac6.svg'%}"></span>
+        <span><img src="{% static 'images/products/star.38ca517c73c491c3d955a799b27aaac6.svg'%}"></span>
+    </div>
+    <p><q>Looks very natural, the smell is awesome</q></p>
+    <div class="user-name">Mart</div>
+</div>
+</div>
+</section>
+<section class="popular-product-section">
+    <div class="context">
+        <h2>Popular</h2>
+        <p>Our top selling product that you may like</p>
+    </div>
+    <div class="section-products">
+        {% for product in Products%}
+        {% if forloop.counter0 < 4 %}
+        <div>
+            <a href="{% url 'website:product' product.id%}"><img src="static/images/products/{{product.name}}.png"></a>
+            <h4>{{product.name}}</h4>
+            <p>{{product.price}}$</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

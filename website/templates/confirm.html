@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candleaf</title>
+    <link rel="stylesheet" href="{% static 'css/confirm.css'%}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css'%}">
+</head>
+
+<body>
+        <header>
+            <img src="{% static 'images/products/icon.6e5d1c5d98b7187206cc019288e71fcf.svg'%}">
+            <img src="{% static 'images/products/wordmark.0c42ab7ebd6cadc552e4ffcc9f7e90c4.svg'%}">
+        </header>
+        <main>
+            <section class="one">
+                <i class="fa-regular fa-circle-check"></i>
+                <h1>Payment Confirmed</h1>
+                <p> Thank you for buying Candleaf. The nature is grateful to you. Now that your order is
+                    confirmed it will be ready to ship in 2 days. Please check your inbox in the future for your
+                    order updates.</p>
+                    <a href="{% url 'website:home'%}">Back to shop</a>
+            </section>
+        </main>
+        <script type="module" src="{% static 'js/confirm.js'%}"></script>
+</body>
+
+</html>

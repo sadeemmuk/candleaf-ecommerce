@@ -1,0 +1,34 @@
+{% extends 'base.html'%} {% block content %}
+{% load static %}
+<section class="product">
+  <div class="product-box">
+    <div class="img-box">
+      <img src="/static/images/products/{{product.name}}.png" />
+      <p>
+        All hand-made with natural soy wax, Candleaf is 
+        <p>made for your pleasure
+          moments.</p>
+      </p>
+      <p>🚚 free shipping</p>
+    </div>
+    <div class="text-box">
+      <h2>{{product.name}} Candleaf®</h2>
+      <p>${{product.price}}</p>
+      <form>
+        <input type="hidden" value="{{product.id}}" class="id">
+        <div class="Quantity">
+          <label>Quantity</label>
+          <div class="Qun-con">
+            <button class="increase">+</button>
+            <span class="num">1</span>
+            <button class="decrease">-</button>
+          </div>
+        </div>
+        <input type="submit"  value="+ Add to cart" class="button">
+        <input type="hidden" name="next" value="{{next}}" />
+      </form>
+    </div>
+  </div>
+</section>
+<script type="module" src="{% static 'js/product.js' %}"></script>
+{% endblock %}

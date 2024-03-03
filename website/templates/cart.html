@@ -1,0 +1,40 @@
+{% extends 'base.html'%} {% block content %}
+{% load static %}
+<style>
+  main{
+    padding: 0 100px;
+  }
+</style>
+<div class="no-elements">
+  <div class="massage">
+    <h1>No Products in the Cart</h1>
+    <a href="{% url 'website:home' %}">Go and shop</a>
+  </div>
+</div>
+<section class="cart-one">
+  <article>
+    <h2>Your cart items</h2>
+    <p><a href="{% url 'website:home' %}">Back to shopping</a></p>
+  </article>
+</section>
+<section class="cart-two">
+  <div class="product-box">
+    <div class="item">Product</div>
+    <div class="item">Price</div>
+    <div class="item">Quantity</div>
+    <div class="item">Total</div>
+</section>
+<section class="section-three">
+  <div class="container-product"></div>
+</section>
+<section class="cart-four">
+  <div class="subtotal">
+    <div class="information">
+      <h2>Subtotal $<span></span></h2>
+      <p>Tax and shipping cost will be calculated later</p>
+    </div>
+    <button class="button">Checkout</button>
+  </div>
+</section>
+<script type="module" src="{% static 'js/cart.js'%}"></script>
+{% endblock %}

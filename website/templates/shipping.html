@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candleaf/Shipping</title>
+    <link rel="stylesheet" href="{% static 'css/shipping.css'%}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css'%}">
+</head>
+
+<body>
+    <div class="two-column-grid">
+        <div class="row">
+            <header>
+                <img src="{% static 'images/products/icon.6e5d1c5d98b7187206cc019288e71fcf.svg'%}">
+                <img src="{% static 'images/products/wordmark.0c42ab7ebd6cadc552e4ffcc9f7e90c4.svg'%}">
+            </header>
+            <nav>
+                <ul>
+                    <li>Cart</li>
+                    <li>&gt;</li>
+                    <li>Details</li>
+                    <li>&gt;</li>
+                    <li>Shipping</li>
+                    <li>&gt;</li>
+                    <li>Payments</li>
+                </ul>
+            </nav>
+            <main>
+                <section class="one">
+                    <article>
+                        <div class="name">Contact</div>
+                        <div class="phone"></div>
+                    </article>
+
+                    <hr>
+                    <article>
+                        <div class="name">Ship to</div>
+                        <div class="address"></div>
+                    </article>
+                </section>
+                <section class="two">
+                    <h3>Shipping method</h3>
+                    <article>
+                        <div class="strandard">
+                            <div> Strandard shipping</div>
+                            <div class="free">Free</div>
+                        </div>
+                    </article>
+                </section>
+                <footer>
+                    <a href="{% url 'website:cart'%}">Back to cart</a>
+                    <button class="button">Confirm The Order</button>
+                </footer>
+            </main>
+        </div>
+        <div class="row-two">
+            <div class="row-second">
+            <div class="product-checkout"></div>
+            <div class="all">
+                <div class="subtotal">
+                    <p>Shipping</p>
+                    <p>Free shipping</p>
+                </div>
+                <div class="total">
+                    <p>Total</p>
+                    <p class="total-price">$<span></span></p>
+                </div>
+            </div>
+            </div>
+        </div>
+        <script type="module" src="{% static 'js/shipping.js'%}"></script>
+</body>
+
+</html>
